@@ -1,4 +1,4 @@
-package cosmos.com.simpleacalculator;
+package cosmos.com.simpleCalculator;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -19,9 +19,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(cosmos.com.simpleCalculator.R.layout.activity_main);
 
-        _screen = (TextView)findViewById(R.id.textView);
+        _screen = (TextView)findViewById(cosmos.com.simpleCalculator.R.id.textView);
         _screen.setText(display);
     }
 

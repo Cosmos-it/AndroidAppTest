@@ -4,7 +4,7 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
     defaultConfig {
-        applicationId "cosmos.com.simpleacalculator"
+        applicationId "cosmos.com.simpleCalculator"
         minSdkVersion 23
         targetSdkVersion 23
         versionCode 1
