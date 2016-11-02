@@ -1,4 +1,4 @@
-package cosmos.com.simpleacalculator;
+package cosmos.com.simpleCalculator;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("cosmos.com.simpleacalculator", appContext.getPackageName());
+        assertEquals("cosmos.com.simpleCalculator", appContext.getPackageName());
     }
 }

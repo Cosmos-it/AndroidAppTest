@@ -1,4 +1,4 @@
-package cosmos.com.simpleacalculator;
+package cosmos.com.simpleCalculator;
 
 import org.junit.Test;
 

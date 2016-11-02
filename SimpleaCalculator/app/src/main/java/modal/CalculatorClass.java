@@ -11,20 +11,46 @@ import java.util.Locale;
 
 public class CalculatorClass {
 
-    private double addition(String a, String b) {
+    public double addition(String a, String b) {
+
         return (Double.valueOf(a) + Double.valueOf(b));
     }
 
-    private double subtraction(String a, String b){
+    public double addition(double a, double b) {
+
+        return (a + b);
+    }
+
+    public double subtraction(String a, String b){
         return (Double.valueOf(a) - Double.valueOf(b));
     }
 
-    private double divide(String a, String b) {
+    public double subtraction(double a, double b){
+        return (a - b);
+    }
+
+    public double divide(String a, String b) {
+
         return (Double.valueOf(a) / Double.valueOf(b));
     }
 
-    private double multiply(String a, String b){
+    public double divide(double a, double b) {
+
+        return (a / b);
+    }
+
+
+    public double multiply(String a, String b){
+
         return (Double.valueOf(a) * Double.valueOf(b));
+    }
+
+    public double multiply(double a, double b){
+        return (a * b);
+    }
+
+    public double rasiedToPowerOf(double a, double b){
+        return Math.pow(a, b);
     }
 
     public double operation(String a, String b, String op){
