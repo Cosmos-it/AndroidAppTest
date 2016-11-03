@@ -1,11 +1,14 @@
 import service.CalculatorService;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.datatransfer.Clipboard;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
  * Created by Taban on 11/1/16.
+ *
  */
 
 
@@ -19,6 +22,9 @@ public class Calculator {
 
     public Calculator() {
 
+        CalculationArea.setPreferredSize(new Dimension(40, 50));
+        Clear.setPreferredSize(new Dimension(40, 50));
+        EqualsButton.setPreferredSize(new Dimension(40, 50));
         EqualsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -40,7 +46,8 @@ public class Calculator {
     public static void main(String[] args) {
 
         JFrame frame = new JFrame("Calculator");
-        frame.setSize(400, 150);
+
+        frame.setSize(500, 250);
         frame.setContentPane(new Calculator().panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);

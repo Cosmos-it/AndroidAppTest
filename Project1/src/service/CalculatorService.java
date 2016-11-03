@@ -6,9 +6,8 @@ public class CalculatorService {
     private static final int LEFT1 = 0;
     private static final int RIGHT = 1;
     private static CalcFunction clcf;
-    // Operators
-    private static final Map<String, int[]> OPERATORS = new HashMap<String, int[]>();
 
+    private static final Map<String, int[]> OPERATORS = new HashMap<String, int[]>();
 
     /**
      *

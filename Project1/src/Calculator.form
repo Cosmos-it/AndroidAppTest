@@ -15,14 +15,20 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <font name="Menlo" size="22" style="0"/>
+          <text value=""/>
+        </properties>
       </component>
-      <component id="6c41" class="javax.swing.JButton" binding="EqualsButton">
+      <component id="7e88a" class="javax.swing.JButton" binding="Clear">
         <constraints>
-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="20"/>
+          </grid>
         </constraints>
         <properties>
-          <text value="Equals"/>
+          <font name="Menlo" size="22"/>
+          <text value="Clear Screen"/>
         </properties>
       </component>
       <component id="da389" class="javax.swing.JLabel" binding="displayAnswer">
@@ -30,17 +36,19 @@
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <font name="Menlo" size="28" style="1"/>
           <horizontalAlignment value="11"/>
-          <text value="Label"/>
+          <text value="results here"/>
           <verticalAlignment value="0"/>
         </properties>
       </component>
-      <component id="7e88a" class="javax.swing.JButton" binding="Clear">
+      <component id="6c41" class="javax.swing.JButton" binding="EqualsButton">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Clear"/>
+          <font name="Menlo" size="18"/>
+          <text value="Calculate"/>
         </properties>
       </component>
     </children>
