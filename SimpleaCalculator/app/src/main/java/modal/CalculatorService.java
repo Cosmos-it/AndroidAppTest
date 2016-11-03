@@ -1,5 +1,8 @@
 package modal;
 
+import android.util.Log;
+import android.util.StringBuilderPrinter;
+
 import java.util.*;
 
 /**
@@ -53,7 +56,7 @@ public class CalculatorService {
     }
 
     //
-    public static String[] changeInfixToRpn(String[] inputTokens) {
+    private  static String[] changeInfixToRpn(String[] inputTokens) {
         ArrayList<String> out = new ArrayList<String>();
         Stack<String> stack = new Stack<String>();
 
@@ -97,7 +100,7 @@ public class CalculatorService {
         return out.toArray(output);
     }
 
-    public static double changeFromRpnToDouble(String[] tokens) {
+    private static double changeFromRpnToDouble(String[] tokens) {
         Stack<String> stack = new Stack<String>();
         calculatorClass = new CalculatorClass();
 
@@ -112,11 +115,11 @@ public class CalculatorService {
                 Double firstNumber = Double.valueOf(stack.pop());
 
                 //Return a result
-                Double result = token.compareTo("+") == 0 ? calculatorClass.addition(firstNumber, secondNumber) :
-                        token.compareTo("-") == 0 ? calculatorClass.subtraction(firstNumber, secondNumber) :
-                                token.compareTo("*") == 0 ? calculatorClass.multiply(firstNumber, secondNumber) :
-                                        token.compareTo("^") == 0 ? calculatorClass.rasiedToPowerOf(firstNumber, secondNumber) :
-                                                calculatorClass.divide(firstNumber, secondNumber);
+                Double result = token.compareTo("+") == 0 ? firstNumber + secondNumber :
+                        token.compareTo("-") == 0 ? firstNumber - secondNumber:
+                                token.compareTo("*") == 0 ? firstNumber * secondNumber:
+                                        token.compareTo("^") == 0 ? calculatorClass.raisedToPowerOf(firstNumber, secondNumber) :
+                                                firstNumber / secondNumber;
                 //Push to stack
                 stack.push(String.valueOf(result));
             }
@@ -125,5 +128,29 @@ public class CalculatorService {
         return Double.valueOf(stack.pop());
     }
 
+    public static String operation(String str, int counter) {
+        String result = "";
+        StringBuilder builder = new StringBuilder();
+        System.out.print(str.length());
+        Log.d("", String.valueOf(str.length() + " " + counter));
+        if (counter < str.length()) {
+            for(int i = 0; i < str.length(); i++){
+                builder.append(str.charAt(i));
+
+            }
+            str.substring(1);
+            Log.d("", String.valueOf(builder.length() + " " + counter));
+            String[] data = str.split("");
+            String[] output = CalculatorService.changeInfixToRpn(data);
+            try {
+                result = String.valueOf(CalculatorService.changeFromRpnToDouble(output));
+
+            } catch (Exception e) {
+                System.out.print("Error test: " + e.getMessage());
+                result = "Format error eg. ( 1 + 1 )";
+            }
+        }
+        return result;
+    }
 
 }
