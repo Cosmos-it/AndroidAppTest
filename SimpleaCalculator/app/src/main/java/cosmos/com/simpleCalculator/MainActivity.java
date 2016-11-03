@@ -9,12 +9,14 @@ import android.widget.TextView;
 import java.util.regex.Pattern;
 
 import modal.CalculatorClass;
+import modal.CalculatorService;
 
 public class MainActivity extends AppCompatActivity {
     public TextView _screen;
     private String display = "";
     public String currentOperator = "";
     private CalculatorClass calculatorOperations = new CalculatorClass();
+    private CalculatorService calculatorService = new CalculatorService();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickEquals(View view){
+
         String[] operation = display.split(Pattern.quote(currentOperator));
 
         if (operation.length < 2) return;
